@@ -1,17 +1,11 @@
 <template>
   <div class="wrapper">
-  <!-- <header></header> -->
-    <div class="wrapper-content">
 
-      <section>
-        <div class="container">
-          <h1>HELLO</h1>
-          <img alt="Vue logo" src="./assets/logo.png">
-        </div>
+   <header>
+     <h1>Header</h1>
+   </header>
 
-      </section>
-      
-    </div>
+    <router-view></router-view>
 <!--    <footer></footer>-->
   </div>
 </template>
