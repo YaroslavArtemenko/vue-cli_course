@@ -11,16 +11,16 @@ export default new Vuex.Store({
     // служит для того, чтобы менять наш стейт
     // payload - это то, что передаем в мутацию с action
     mutations: {
-        setMessage (state) {
-            state.message = 'hello again'
+        setMessage (state, message) {
+            state.message = message
         }
     },
     // свойство, в котором мы можем изменять стейт, но не напряю, а используя мутации
     // через коммит обращаемся к мутации
     // нужен для того, чтобы работать с асинхронными данных, потому что должны ждать
     actions: {
-        setMessage ({commit}) {
-            commit('setMessage')
+        setMessage ({commit}, payload) {
+            commit('setMessage', payload)
         }
     },
     // action and mutation = setters, getter - получаем значения

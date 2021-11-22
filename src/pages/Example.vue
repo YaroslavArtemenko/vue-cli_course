@@ -29,7 +29,7 @@ export default {
   },
   methods: {
     setMessage() {
-      this.$store.dispatch('setMessage')
+      this.$store.dispatch('setMessage', this.message)
     }
   }
 }
