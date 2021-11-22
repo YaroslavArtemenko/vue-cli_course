@@ -4,7 +4,9 @@
     <section>
       <div class="container">
         <h1>Example Page</h1>
-        <p>{{ message }}</p>
+        <input type="text" v-model="message">
+        <button class="btn btnPrimary" @click="setMessage">Change message</button>
+        <p>{{ getMessage }}</p>
       </div>
 
     </section>
@@ -20,14 +22,16 @@ export default {
       message: null,
     }
   },
-  created() {
-    this.message = this.$store.getters.getMessage
+  computed: {
+    getMessage () {
+      return this.$store.getters.getMessage
+    }
   },
-  // computed: {
-  //   getMessage () {
-  //     return this.$store.getters.getMessage
-  //   }
-  // }
+  methods: {
+    setMessage() {
+      this.$store.dispatch('setMessage')
+    }
+  }
 }
 </script>
 
