@@ -6,7 +6,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
     // храним какие-то данные,
     state: {
-        message: 'Hello vuex'
+        message: 'Hello vuex',
     },
     // служит для того, чтобы менять наш стейт
     // payload - это то, что передаем в мутацию с action
